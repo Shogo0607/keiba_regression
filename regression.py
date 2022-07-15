@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from pycaret.regression import *
+from PIL import Image
 
 st.set_page_config(page_title="LightGBM")
 st.title("LightGBM")
@@ -29,3 +30,8 @@ if vote == "1,2":
 st.dataframe(train_df.head(5))
 
 df = setup(data = train_df, target = "単勝配当",silent=True)
+lightgbm = create_model("lightgbm")
+lightgbm_tuned = tune_model(lightgbm,n_iter=100,optimize="R2")
+plot_model(estimator=lightgbm_tuned,save=True)
+image = Image.open("./Residuals.png")
+st.image(image)
