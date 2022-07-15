@@ -1,0 +1,4 @@
+pandas
+numpy
+streamlit
+pycaret==1.0
