@@ -1,4 +1,4 @@
 pandas
 numpy
 streamlit
-pycaret[full]
+pycaret=1.1
