@@ -1,4 +1,10 @@
 pandas
 numpy
 streamlit
-pycaret
+optuna
+shap
+japanize_matplotlib
+lightgbm
+matplotlib
+pyecharts
+streamlit-echarts
